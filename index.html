@@ -1,45 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Judy's Portfolio</title>
-</head>
-<body>
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="navbar__logo">
-      <i class="fab fa-diaspora"></i>
-      <a href="#">Judy</a>
-    </div>
-    <div>
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item">Home</li>
-        <li class="navbar__menu__item">About</li>
-        <li class="navbar__menu__item">Skills</li>
-        <li class="navbar__menu__item">My work</li>
-        <li class="navbar__menu__item">Testimonial</li>
-        <li class="navbar__menu__item">Contact</li>
-      </ul>
-    </div>
-  </nav>
-  <section id="home">
-    <img src="imgs/김태리.jpeg" alt="Judy's profile photo" class="home__avatar">
-    <h1 class="home__title">Hello, <br/>I'm Judy</h1>
-    <h2 class="home__description">I'm junior font-end engineer </h2>
-    <button class="home__contact">Contact Me</button>
-  </section>
-  <!-- About -->
-  <section id="about">
-
-  </section>
-  <!-- Skills -->
-  <section id="skills"></section>
-  <!-- Work -->
-  <section id="work"></section>
-  <!-- Testimonials -->
-  <section id="testimonials"></section>
-  <!-- Contact -->
-  <section id="contact"></section>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Judy's Portfolio</title>
+    <script src="https://use.fontawesome.com/releases/v6.0.0/js/all.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <i class="fab fa-diaspora"></i>
+        <a href="#">Judy</a>
+      </div>
+      <div>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item">Home</li>
+          <li class="navbar__menu__item">About</li>
+          <li class="navbar__menu__item">Skills</li>
+          <li class="navbar__menu__item">My work</li>
+          <li class="navbar__menu__item">Testimonial</li>
+          <li class="navbar__menu__item">Contact</li>
+        </ul>
+      </div>
+    </nav>
+    <section id="home">
+      <img
+        src="imgs/김태리.jpeg"
+        alt="Judy's profile photo"
+        class="home__avatar"
+      />
+      <h1 class="home__title">Hello, <br />I'm Judy</h1>
+      <h2 class="home__description">I'm Judy</h2>
+      <button class="home__contact">Contact Me</button>
+    </section>
+    <!-- About -->
+    <section id="about">
+      <h1>About me</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto esse
+        voluptatum tempora enim temporibus vel. Sint, exercitationem quo.
+        Tempora totam impedit soluta quae fugit. Eos amet velit exercitationem
+        corrupti nostrum.
+      </p>
+      <div class="about_majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <h2 class="major__title">FrontEnd</h2>
+          <p class="major_description">
+            HTML, CSS, JavaScript, TypeScript
+            <br />
+            React, Vue, Web APIs
+          </p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-solid fa-mobile"></i>
+          </div>
+          <h2 class="major__title">Mobile</h2>
+          <p class="major_description">
+            Android, IOS, React Navtice, Flutter,
+            <br />
+            Java, Swift, Kotiln
+          </p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <h2 class="major__title">Back-end</h2>
+          <p class="major_description">
+            Java, JavaScript, Go, NodeJS,
+            <br />Rest APIs, GraphGL
+          </p>
+        </div>
+      </div>
+      <div class="about__jobs">
+        <div class="job">
+          <span class="job__logo">
+            <i class="fa-solid fa-building"></i>
+          </span>
+          <p class="job__name">Company</p>
+          <div class="job__period"></div>
+        </div>
+        <div class="job">
+          <span class="job__logo">
+            <i class="fa-solid fa-building"></i>
+          </span>
+          <p class="job__name">Company</p>
+          <div class="job__period"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills"></section>
+    <!-- Work -->
+    <section id="work"></section>
+    <!-- Testimonials -->
+    <section id="testimonials"></section>
+    <!-- Contact -->
+    <section id="contact"></section>
+  </body>
 </html>
