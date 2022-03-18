@@ -7,9 +7,9 @@
   --color-pink: #fe918d;
   --color-dark-pink: #ff6863;
   --color-black: #4d4d4d;
+  --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-dark-grey: #4b4646;
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
@@ -23,7 +23,7 @@
   --font-micro: 14px;
 
   /* Font weight */
-  --weight-blod: 700;
+  --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
 
@@ -42,7 +42,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  cursor: default;
 }
 
 a {
@@ -51,8 +50,11 @@ a {
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
 }
 
 button {
@@ -65,9 +67,9 @@ button {
 /* Typography */
 h1 {
   font-size: var(--font-large);
-  font-weight: var(--weight-blod);
+  font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 16px 0;
+  margin: 16px 0px;
 }
 
 h2 {
@@ -79,14 +81,14 @@ h2 {
 
 h3 {
   font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
+  font-weight: var(--font-regular);
   color: var(--color-black);
   margin: 8px 0;
 }
 
 p {
   font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
+  font-weight: var(--font-regular);
   color: var(--color-black);
   margin: 4px 0;
 }
@@ -97,10 +99,9 @@ p {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: transparent;
   align-items: center;
-  color: var(--color-white);
   padding: 16px;
+  background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
 }
@@ -109,21 +110,28 @@ p {
   background-color: var(--color-pink);
   padding: 8px;
 }
-.navbar__menu {
-  display: flex;
-}
 
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: white;
 }
+
+.navbar__menu {
+  display: flex;
+  margin: 0;
+}
+
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
   color: var(--color-white);
   cursor: pointer;
-  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
 }
 
 .navbar__menu__item:hover {
@@ -133,16 +141,18 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  right: 32px;
   top: 24px;
+  right: 32px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
 }
+
+/* Home */
 #home {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
-  padding-top: 100px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -161,11 +171,11 @@ p {
 .home__contact {
   color: var(--color-white);
   font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-bold);
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid white;
-  border-radius: 4px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
 
 .home__contact:hover {
@@ -195,8 +205,8 @@ p {
   height: 170px;
   line-height: 170px;
   font-size: 70px;
-  color: var(--color-blue);
   margin: auto;
+  color: var(--color-blue);
   border: 1px solid var(--color-blue);
   border-radius: 50%;
   margin-bottom: 16px;
@@ -216,7 +226,7 @@ p {
   color: var(--color-dark-grey);
 }
 
-.major__descr3iption {
+.major__description {
   font-size: var(--font-small);
 }
 
@@ -239,7 +249,7 @@ p {
   font-size: var(--font-small);
 }
 
-.job__description {
+.job__period {
   font-size: var(--font-micro);
 }
 
@@ -259,7 +269,6 @@ p {
 .skillset__title {
   color: var(--color-white);
 }
-
 .skillset__left {
   flex-basis: 60%;
   background-color: var(--color-dark-grey);
@@ -269,11 +278,6 @@ p {
 .skill {
   margin-bottom: 32px;
 }
-
-.skillset__right {
-  flex-basis: 40%;
-}
-
 .skill__description {
   display: flex;
   justify-content: space-between;
@@ -289,6 +293,11 @@ p {
   height: 3px;
   background-color: var(--color-orange);
 }
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
 .tools {
   background-color: var(--color-grey);
 }
@@ -305,7 +314,7 @@ p {
 }
 
 .category__btn {
-  border: 1px solid var(--color-dark-grey);
+  border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
@@ -335,7 +344,6 @@ p {
   position: absolute;
   top: -20px;
   right: 16px;
-
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -358,7 +366,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 280px;
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
@@ -368,13 +376,10 @@ p {
   display: none;
 }
 
-.project:hover .project__description {
-  opacity: 0.8;
-  transform: translateY(0px);
-}
 .project__img {
   max-width: 100%;
   max-height: 100%;
+  align-self: center;
 }
 
 .project__description {
@@ -390,6 +395,11 @@ p {
   opacity: 0;
   transform: translateY(10px);
   transition: all var(--animation-duration) ease-in;
+}
+
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
 }
 
 .project__description h3 {
@@ -409,7 +419,6 @@ p {
 }
 
 /* Testimonial */
-
 #testimonials {
   background-color: var(--color-light-white);
 }
@@ -474,7 +483,7 @@ p {
 
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-black);
+  color: var(--color-yellow);
 }
 
 /* Scroll */
@@ -485,12 +494,12 @@ p {
   width: 70px;
   height: 70px;
   font-size: 50px;
-  background-color: var(--color-pink);
   color: var(--color-white);
+  background-color: var(--color-pink);
   border-radius: 50%;
   opacity: 0;
-  transition: all var(--animation-duration) ease-in;
   pointer-events: none;
+  transition: opacity 300ms ease-in;
 }
 
 .arrow-up.visible {
@@ -500,8 +509,8 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
-  /* Font size */
   :root {
+    /* Font size */
     --font-large: 30px;
     --font-medium: 18px;
     --font-regular: 16px;
@@ -525,6 +534,7 @@ p {
   #navbar.navbar--dark {
     padding: 16px;
   }
+
   .navbar__menu {
     flex-direction: column;
     text-align: center;
@@ -557,6 +567,7 @@ p {
 
   .category__btn {
     margin: 4px 0;
+    width: 100%;
   }
 
   .project {
@@ -575,7 +586,8 @@ p {
 
   .testimonial__avatar:nth-child(even),
   .testimonial__avatar:nth-child(odd) {
-    margin: 8px 0px;
+    margin: 0;
+    margin-bottom: 8px;
   }
 
   .testimonial__speech-bubble {
